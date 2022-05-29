@@ -15,18 +15,20 @@ This diagram based on oauth implicit flow.
 
 ***
 
-The whole process is described below.
+The whole process is described below
 
 1. Verify Id token received from SPA
 
 2. Make account using information of id token
 
-3. Save account to DB using Spring-Data-JPA and H2 database.
+3. Save account to DB using Spring-Data-JPA and H2 database
 
 4. Make custom JWT
 
 5. Send cookie including custome JWT to client (SPA)
 
-6. Request to API without login should be validated before API request at JWT filter.
+6. Requesting to API should be contain JWT in request header
+
+7. JWT filter validates jwt in reqeust header for every reqeusts from client
 
 
