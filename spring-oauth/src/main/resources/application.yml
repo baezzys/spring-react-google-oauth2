@@ -1,0 +1,13 @@
+app:
+  jwtSecret: Aslkdjalwidjaslmdnmcnvxleflisdjflskejflidsjflskjef
+  googleClientId: 901791793363-0f6eku8daciar7lqhin2hv6694tnbibh.apps.googleusercontent.com
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: SA
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
