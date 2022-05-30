@@ -6,7 +6,8 @@ You have to make a Google oauth credential first and then replace placeholder in
 
 This diagram based on oauth implicit flow.
 
-![googleOauth drawio](https://user-images.githubusercontent.com/55564829/169686208-1b2926c0-b27e-4154-9853-a4a8ffec286c.png)
+![googleOauth drawio (1)](https://user-images.githubusercontent.com/55564829/170871906-d3beb965-bd0b-49cc-a1ad-4ce1e0a1ef29.png)
+
 
 
 
@@ -14,18 +15,20 @@ This diagram based on oauth implicit flow.
 
 ***
 
-The whole process is described below.
+The whole process is described below
 
 1. Verify Id token received from SPA
 
 2. Make account using information of id token
 
-3. Save account to DB using Spring-Data-JPA and H2 database.
+3. Save account to DB using Spring-Data-JPA and H2 database
 
 4. Make custom JWT
 
 5. Send cookie including custome JWT to client (SPA)
 
-6. Request to API without login should be validated before API request at JWT filter.
+6. Requesting to API should be contain JWT in request header
+
+7. JWT filter validates jwt in reqeust header for every reqeusts from client
 
 
