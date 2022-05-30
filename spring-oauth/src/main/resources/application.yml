@@ -1,6 +1,6 @@
 app:
-  jwtSecret: Aslkdjalwidjaslmdnmcnvxleflisdjflskejflidsjflskjef
-  googleClientId: 901791793363-0f6eku8daciar7lqhin2hv6694tnbibh.apps.googleusercontent.com
+  jwtSecret: Aslkdjalwidjaslmdnmcnvxleflisdjflskejflidsjflskjefasdsadsadasdqweqewqe123asdsadzxczcadw
+  googleClientId: "your google client Id"
 
 spring:
   datasource:
