@@ -1,28 +1,35 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
 import GoogleLogin from '../../components/GoogleLogin';
-import { oauth } from '../../recoil/oauth';
+import Cookies from 'js-cookie';
+import Nav from '../../components/Nav';
+import { getLoginToken } from '../../utils/getLoginToken';
 
 export default function Login() {
   const navigate = useNavigate();
-  const [token, setToken] = useRecoilState(oauth);
 
-  const onGoogleSignIn = res => {
-    console.log('[login success]', { res });
+  const onGoogleSignIn = async res => {
     const { credential } = res;
-    setToken(credential);
+    const isLogin = await getLoginToken(credential);
+
+    if (!isLogin) return;
+
+    Cookies.set('isLogin', JSON.stringify(isLogin), { secure: true });
+    navigate('/mypage', { replace: true });
   };
 
   useEffect(() => {
-    if (!token) return;
+    const isLogin = Cookies.get('isLogin');
+    if (!isLogin) return;
+
     navigate('/mypage', { replace: true });
-  }, [token]);
+  }, []);
 
   return (
-    <>
+    <div>
       <h1>Goggle Login</h1>
+      <Nav />
       <GoogleLogin onGoogleSignIn={onGoogleSignIn} text="로그인" />
-    </>
+    </div>
   );
 }
