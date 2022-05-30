@@ -14,6 +14,7 @@ export default function Login() {
 
     if (!isLogin) return;
 
+    // https://stackoverflow.com/questions/49819183/react-what-is-the-best-way-to-handle-login-and-authentication
     Cookies.set('isLogin', JSON.stringify(isLogin), { secure: true });
     navigate('/mypage', { replace: true });
   };
