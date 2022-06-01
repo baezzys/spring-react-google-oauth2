@@ -25,8 +25,7 @@ public class LoginController {
     public ResponseEntity LoginWithGoogleOauth2(@RequestBody IdTokenRequestDto requestBody, HttpServletResponse response) {
         String authToken = accountService.loginOAuthGoogle(requestBody);
         final ResponseCookie cookie = ResponseCookie.from("AUTH-TOKEN", authToken)
-                .httpOnly(false)
-                .sameSite("None")
+                .httpOnly(true)
                 .maxAge(7 * 24 * 3600)
                 .path("/")
                 .secure(false)
