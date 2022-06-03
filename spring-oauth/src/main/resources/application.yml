@@ -1,13 +1,18 @@
 app:
   jwtSecret: Aslkdjalwidjaslmdnmcnvxleflisdjflskejflidsjflskjefasdsadsadasdqweqewqe123asdsadzxczcadw
-  googleClientId: "your google client Id"
+  googleClientId: "your-google-client-id"
 
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
     username: SA
     password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
 
+server:
+  servlet:
+    session:
+      cookie:
+        same-site: none

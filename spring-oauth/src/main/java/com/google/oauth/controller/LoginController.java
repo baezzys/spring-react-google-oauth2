@@ -30,8 +30,6 @@ public class LoginController {
                 .path("/")
                 .secure(false)
                 .build();
-        System.out.println(authToken);
-
         response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
         return ResponseEntity.ok().build();
     }
