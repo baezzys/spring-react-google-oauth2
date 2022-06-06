@@ -17,7 +17,7 @@ This diagram based on oauth implicit flow.
 
 The whole process is described below
 
-1. Verify Id token received from SPA
+1. Verify Id token received from client
 
 2. Make account using information of id token
 
@@ -25,10 +25,28 @@ The whole process is described below
 
 4. Make custom JWT
 
-5. Send cookie including custome JWT to client (SPA)
+5. Send cookie including custome JWT to client
 
 6. Requesting to API should be contain JWT in request header
 
 7. JWT filter validates jwt in reqeust header for every reqeusts from client
+
+### REACT
+
+***
+
+The whole process is described below
+
+1. Login with your existing google account.
+
+2. Get a ID token from google.
+
+3. Send ID token to server for login.
+
+4. Get a JWT that stored at http only cookie made by server.
+
+5. Request user info to server with jwt.
+
+6. Show user info
 
 
