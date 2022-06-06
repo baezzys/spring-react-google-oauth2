@@ -13,9 +13,18 @@ This diagram based on oauth implicit flow.
 
 ## Spring boot
 
-***
+### How to start
+```
+cd spring-oauth
 
-The whole process is described below
+./gradlew build
+
+cd build/libs
+
+java -jar oauth-0.0.1-SNAPSHOW.jar
+```
+
+### The whole process is described below
 
 1. Verify Id token received from client.
 
@@ -33,9 +42,17 @@ The whole process is described below
 
 ## REACT
 
-***
+### How to start
 
-The whole process is described below
+```
+cd react-oauth
+
+npm install
+
+npm start
+```
+
+### The whole process is described below
 
 1. Login with your existing google account.
 
