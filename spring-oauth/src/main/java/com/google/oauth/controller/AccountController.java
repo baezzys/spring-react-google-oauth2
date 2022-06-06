@@ -20,6 +20,6 @@ public class AccountController {
     @GetMapping("/user/info")
     public ResponseEntity getUserInfo(Principal principal) {
         Account account = accountRepository.findById(Long.valueOf(principal.getName())).orElse(null);
-        return ResponseEntity.ok(account.getEmail());
+        return ResponseEntity.ok().body(account.getEmail());
     }
 }
