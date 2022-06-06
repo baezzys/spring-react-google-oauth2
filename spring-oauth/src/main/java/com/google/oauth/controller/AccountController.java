@@ -1,6 +1,6 @@
 package com.google.oauth.controller;
 
-import com.google.oauth.repository.AccountRepository;
+import com.google.oauth.service.AccountService;
 import com.google.oauth.user.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,11 +17,11 @@ import static com.google.oauth.dto.AccountDto.convertToDto;
 public class AccountController {
 
     @Autowired
-    AccountRepository accountRepository;
+    AccountService accountService;
 
     @GetMapping("/user/info")
     public ResponseEntity getUserInfo(Principal principal) {
-        Account account = accountRepository.findById(Long.valueOf(principal.getName())).orElse(null);
+        Account account = accountService.getAccount(Long.valueOf(principal.getName()));
         return ResponseEntity.ok().body(convertToDto(account));
     }
 }

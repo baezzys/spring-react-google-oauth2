@@ -20,7 +20,6 @@ import java.util.Collections;
 @Service
 public class AccountService {
 
-
     private final AccountRepository accountRepository;
     private final JWTUtils jwtUtils;
     private final GoogleIdTokenVerifier verifier;
