@@ -18,7 +18,11 @@ This diagram based on oauth implicit flow.
 ## Spring boot
 
 ### How to start
-```
+
+Edit value of `app: googleClientId` to your google client id and `app: jwtSecret` to your secret which can be any string lonnger than 256 bits for security in application.yml.
+
+
+```shell
 cd spring-oauth
 
 ./gradlew build
@@ -48,7 +52,9 @@ java -jar oauth-0.0.1-SNAPSHOW.jar
 
 ### How to start
 
-```
+Edit value of `REACT_APP-GOOGLE_GOOGLE_CLIENT_ID` in react-oauth/.env to your google client id.
+
+```shell
 cd react-oauth
 
 npm install
