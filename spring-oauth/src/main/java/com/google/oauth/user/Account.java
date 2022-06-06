@@ -34,5 +34,9 @@ public class Account {
     private String roles;
 
     public Account(String firstName, String lastName, String email, String pictureUrl) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.pictureUrl = pictureUrl;
     }
 }
