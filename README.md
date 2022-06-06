@@ -19,9 +19,15 @@ This diagram based on oauth implicit flow.
 
 ### How to start
 
-Edit value of `app: googleClientId` to your google client id and `app: jwtSecret` to your secret which can be any string lonnger than 256 bits for security in `application.yml`.
+1. Edit value of `app: googleClientId` to your google client id and `app: jwtSecret` to your secret which can be any string lonnger than 256 bits for security in `application.yml`.
 
+```yaml
+app:
+  jwtSecret: "String lonnger than 256 bits"
+  googleClientId: "your google client id"
+```
 
+2. Type command in terminal
 ```shell
 cd spring-oauth
 
@@ -52,8 +58,14 @@ java -jar oauth-0.0.1-SNAPSHOW.jar
 
 ### How to start
 
-Edit value of `REACT_APP-GOOGLE_GOOGLE_CLIENT_ID` in `react-oauth/.env` to your google client id.
+1. Edit value of `REACT_APP-GOOGLE_GOOGLE_CLIENT_ID` in `react-oauth/.env` to your google client id.
 
+```js
+REACT_APP_API_URL="http://localhost:8080"
+REACT_APP_GOOGLE_CLIENT_ID="your google client-id"
+```
+
+2. Type command in terminal
 ```shell
 cd react-oauth
 
