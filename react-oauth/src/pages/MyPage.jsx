@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Nav from '../components/Nav';
 import { useState } from 'react';
 import { getUserInfo } from '../api/getUserInfo';
 
@@ -25,7 +24,6 @@ export default function MyPage({ isLogin }) {
   return (
     <div>
       <h1>mypage</h1>
-      <Nav />
       <p>Welcome To MyPage</p>
       <p>email: {info.email}</p>
       <p>name: {`${info.lastName} ${info.firstName}`}</p>
