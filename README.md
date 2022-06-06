@@ -11,27 +11,27 @@ This diagram based on oauth implicit flow.
 
 
 
-### Spring boot
+## Spring boot
 
 ***
 
 The whole process is described below
 
-1. Verify Id token received from client
+1. Verify Id token received from client.
 
-2. Make account using information of id token
+2. Make account using information of id token.
 
-3. Save account to DB using Spring-Data-JPA and H2 database
+3. Save account to DB using Spring-Data-JPA and H2 database.
 
-4. Make custom JWT
+4. Make custom JWT.
 
-5. Send cookie including custome JWT to client
+5. Send cookie including custome JWT to client.
 
-6. Requesting to API should be contain JWT in request header
+6. Requesting to API should be contain JWT in request header.
 
-7. JWT filter validates jwt in reqeust header for every reqeusts from client
+7. JWT filter validates jwt in reqeust header for every reqeusts from client.
 
-### REACT
+## REACT
 
 ***
 
@@ -43,10 +43,10 @@ The whole process is described below
 
 3. Send ID token to server for login.
 
-4. Get a JWT that stored at http only cookie made by server.
+4. Get a cookie which contains jwt made by server.
 
-5. Request user info to server with jwt.
+5. Request user info to server with cookie.
 
-6. Show user info
+6. Show user info.
 
 
