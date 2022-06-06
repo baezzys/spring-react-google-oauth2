@@ -4,6 +4,10 @@ export const getUserInfo = async () => {
 
   try {
     const response = await fetch(`${API_URL}${path}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
       credentials: 'include',
     });
     if (!response.ok) throw new Error('bad server condition');

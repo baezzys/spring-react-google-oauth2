@@ -11,7 +11,6 @@ export default function Login({ isLogin, setIsLogin }) {
   const onGoogleSignIn = async res => {
     const { credential } = res;
     const result = await postLoginToken(credential, setIsLogin);
-    console.log({ result });
     setIsLogin(result);
   };
 
