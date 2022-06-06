@@ -10,25 +10,64 @@ This diagram based on oauth implicit flow.
 
 
 
+## Result
 
-### Spring boot
+![google-oauth-login](https://user-images.githubusercontent.com/55564829/172130755-ab1dc492-0686-407a-8d64-ba9816f941a4.gif)
 
-***
 
-The whole process is described below
+## Spring boot
 
-1. Verify Id token received from SPA
+### How to start
+```
+cd spring-oauth
 
-2. Make account using information of id token
+./gradlew build
 
-3. Save account to DB using Spring-Data-JPA and H2 database
+cd build/libs
 
-4. Make custom JWT
+java -jar oauth-0.0.1-SNAPSHOW.jar
+```
 
-5. Send cookie including custome JWT to client (SPA)
+### The whole process is described below
 
-6. Requesting to API should be contain JWT in request header
+1. Verify Id token received from client.
 
-7. JWT filter validates jwt in reqeust header for every reqeusts from client
+2. Make account using information of id token.
+
+3. Save account to DB using Spring-Data-JPA and H2 database.
+
+4. Make custom JWT.
+
+5. Send cookie including custome JWT to client.
+
+6. Requesting to API should be contain JWT in request header.
+
+7. JWT filter validates jwt in reqeust header for every reqeusts from client.
+
+## REACT
+
+### How to start
+
+```
+cd react-oauth
+
+npm install
+
+npm start
+```
+
+### The whole process is described below
+
+1. Login with your existing google account.
+
+2. Get a ID token from google.
+
+3. Send ID token to server for login.
+
+4. Get a cookie which contains jwt made by server.
+
+5. Request user info to server with cookie.
+
+6. Show user info.
 
 
