@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
+import static com.google.oauth.dto.AccountDto.convertToDto;
+
 @RestController
 @RequestMapping("/v1/oauth")
 public class AccountController {
@@ -20,6 +22,6 @@ public class AccountController {
     @GetMapping("/user/info")
     public ResponseEntity getUserInfo(Principal principal) {
         Account account = accountRepository.findById(Long.valueOf(principal.getName())).orElse(null);
-        return ResponseEntity.ok().body(account.getEmail());
+        return ResponseEntity.ok().body(convertToDto(account));
     }
 }
