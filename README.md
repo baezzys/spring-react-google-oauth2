@@ -2,9 +2,9 @@
 
 Google Oauth2 login scenario with Spring boot + React
 
-You have to make a Google oauth credential first and then replace placeholder in this example with your google cliend id.
+You have to make a Google oauth credential first and then replace the placeholder in this example with your google client id.
 
-This diagram based on oauth implicit flow.
+This diagram is based on oauth implicit flow.
 
 ![googleOauth drawio (1)](https://user-images.githubusercontent.com/55564829/170871906-d3beb965-bd0b-49cc-a1ad-4ce1e0a1ef29.png)
 
@@ -19,7 +19,7 @@ This diagram based on oauth implicit flow.
 
 ### How to start
 
-1. Edit value of `app: googleClientId` to your google client id and `app: jwtSecret` to your secret which can be any string lonnger than 256 bits for security in `application.yml`.
+1. Edit the value of `app: googleClientId` to your google client id and `app: jwtSecret` to your secret which can be any string longer than 256 bits for security in `application.yml`.
 
 ```yaml
 app:
@@ -40,25 +40,25 @@ java -jar oauth-0.0.1-SNAPSHOW.jar
 
 ### The whole process is described below
 
-1. Verify Id token received from client.
+1. Verify Id token received from the client.
 
-2. Make account using information of id token.
+2. Make an account using the information of the id token.
 
 3. Save account to DB using Spring-Data-JPA and H2 database.
 
 4. Make custom JWT.
 
-5. Send cookie including custome JWT to client.
+5. Send cookie including custom JWT to the client.
 
-6. Requesting to API should be contain JWT in request header.
+6. Requesting to API should contain JWT in the request header.
 
-7. JWT filter validates jwt in reqeust header for every reqeusts from client.
+7. JWT filter validates jwt in the request header for every request from the client.
 
 ## REACT
 
 ### How to start
 
-1. Edit value of `REACT_APP-GOOGLE_GOOGLE_CLIENT_ID` in `react-oauth/.env` to your google client id.
+1. Edit the value of `REACT_APP-GOOGLE_GOOGLE_CLIENT_ID` in `react-oauth/.env` to your google client id.
 
 ```js
 REACT_APP_API_URL="http://localhost:8080"
@@ -78,13 +78,13 @@ npm start
 
 1. Login with your existing google account.
 
-2. Get a ID token from google.
+2. Get an ID token from google.
 
 3. Send ID token to server for login.
 
-4. Get a cookie which contains jwt made by server.
+4. Get a cookie that contains jwt made by the server.
 
-5. Request user info to server with cookie.
+5. Request user info to the server with a cookie.
 
 6. Show user info.
 
