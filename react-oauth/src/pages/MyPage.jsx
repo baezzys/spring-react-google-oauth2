@@ -6,17 +6,20 @@ import { getUserInfo } from '../api/getUserInfo';
 
 export default function MyPage({ isLogin }) {
   const navigate = useNavigate();
-  const [name, setName] = useState('');
+  const [info, setInfo] = useState({
+    email: '',
+    firstName: '',
+    lastName: '',
+  });
 
   useEffect(() => {
     if (!isLogin) navigate('/');
 
-    const initUserName = async () => {
-      const newName = await getUserInfo();
-      console.log({ newName });
-      setName(JSON.stringify(newName.data));
+    const initUserinfo = async () => {
+      const newinfo = await getUserInfo();
+      setInfo(newinfo);
     };
-    initUserName();
+    initUserinfo();
   }, [isLogin]);
 
   return (
@@ -24,14 +27,8 @@ export default function MyPage({ isLogin }) {
       <h1>mypage</h1>
       <Nav />
       <p>Welcome To MyPage</p>
-      <p>name: {name}</p>
-      <button
-        onClick={() => {
-          navigate('/', { replace: true });
-        }}
-      >
-        logout
-      </button>
+      <p>email: {info.email}</p>
+      <p>name: {`${info.lastName} ${info.firstName}`}</p>
     </div>
   );
 }

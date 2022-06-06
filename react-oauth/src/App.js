@@ -11,7 +11,6 @@ export default function App() {
   useEffect(() => {
     const initLogin = async () => {
       const name = await getUserInfo();
-      console.log({ name });
       setIsLogin(!!name);
     };
     initLogin();

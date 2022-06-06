@@ -7,6 +7,7 @@ export const postLoginToken = async idToken => {
       method: 'POST',
       credentials: 'include', // include, *same-origin, omit
       headers: {
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(idToken), // body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 함
