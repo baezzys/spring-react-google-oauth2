@@ -6,9 +6,7 @@ You have to make a Google oauth credential first and then replace the placeholde
 
 This diagram is based on oauth implicit flow.
 
-![googleOauth drawio (1)](https://user-images.githubusercontent.com/55564829/170871906-d3beb965-bd0b-49cc-a1ad-4ce1e0a1ef29.png)
-
-
+![oauthFlow](https://user-images.githubusercontent.com/55564829/172381461-e6bb6260-8f58-40d4-a384-e85ef83d5825.png)
 
 ## Result
 
