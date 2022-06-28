@@ -2,9 +2,7 @@
 
 Google Oauth2 login scenario with Spring boot + React
 
-You have to make a Google oauth credential first and then replace the placeholder in this example with your google client id.
-
-This diagram is based on oauth implicit flow.
+Below diagram is based on oauth implicit flow.
 
 ![oauthFlow](https://user-images.githubusercontent.com/55564829/172382434-48ed0c73-dadb-4b85-ab22-19d9e1b89033.png)
 
@@ -13,15 +11,24 @@ This diagram is based on oauth implicit flow.
 ![google-oauth-login](https://user-images.githubusercontent.com/55564829/172130755-ab1dc492-0686-407a-8d64-ba9816f941a4.gif)
 
 
-## Spring boot
+# How to start
 
-### How to start
+## Prerequiste
+
+You have to make a Google oauth credential first.
+
+This reference will be helpful.
+
+<link>https://docs.retool.com/docs/google-oauth-credentials</link>
+
+
+## Spring boot
 
 1. Edit the value of `app: googleClientId` to your google client id and `app: jwtSecret` to your secret which can be any string longer than 256 bits for security in `application.yml`.
 
 ```yaml
 app:
-  jwtSecret: "String lonnger than 256 bits"
+  jwtSecret: "String longer than 256 bits"
   googleClientId: "your google client id"
 ```
 
@@ -53,8 +60,6 @@ java -jar oauth-0.0.1-SNAPSHOW.jar
 7. JWT filter validates jwt in the request header for every request from the client.
 
 ## REACT
-
-### How to start
 
 1. Edit the value of `REACT_APP-GOOGLE_GOOGLE_CLIENT_ID` in `react-oauth/.env` to your google client id.
 
