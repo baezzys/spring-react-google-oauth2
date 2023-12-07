@@ -21,6 +21,13 @@ This reference will be helpful.
 
 <link>https://docs.retool.com/docs/google-oauth-credentials</link>
 
+##### Caution
+
+When setting up the 'Authorized JavaScript origins' in the Google Developer Console's Credential settings. You have to adding both http://localhost and http://localhost:3000.
+
+
+<img width="561" alt="스크린샷 2023-12-07 오후 2 25 27" src="https://github.com/baezzys/spring-react-google-oauth2/assets/55564829/284556b1-4c70-4c65-9384-df1e6dc37893">
+
 
 ## Spring boot
 
