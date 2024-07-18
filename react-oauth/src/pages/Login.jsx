@@ -21,7 +21,7 @@ export default function Login({ isLogin, setIsLogin }) {
 
   return (
     <div>
-      <h1>Goggle Login</h1>
+      <h1>Google Login</h1>
       <Nav />
       <GoogleLogin onGoogleSignIn={onGoogleSignIn} text="로그인" />
     </div>
