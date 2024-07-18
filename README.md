@@ -47,7 +47,7 @@ cd spring-oauth
 
 cd build/libs
 
-java -jar oauth-0.0.1-SNAPSHOW.jar
+java -jar oauth-0.0.1-SNAPSHOT.jar
 ```
 
 ### Process Overview
