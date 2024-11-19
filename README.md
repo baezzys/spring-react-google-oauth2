@@ -1,4 +1,4 @@
-# Spring React OAuth2 Example
+# Spring React Google OAuth2 Example
 
 Implementing Google OAuth2 login using Spring Boot and React.
 
